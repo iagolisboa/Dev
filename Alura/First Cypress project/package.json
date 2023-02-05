@@ -1,0 +1,29 @@
+{
+  "name": "first-cypress-project",
+  "version": "1.0.0",
+  "description": "Testing Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iagolisboa/Cypress-test.git"
+  },
+  "keywords": [
+    "Cypress",
+    "Node.js"
+  ],
+  "author": "Iago Lisboa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iagolisboa/Cypress-test/issues"
+  },
+  "homepage": "https://github.com/iagolisboa/Cypress-test#readme",
+  "dependencies": {
+    "cypress": "^12.5.1"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.3"
+  }
+}
