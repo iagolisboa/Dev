@@ -1,7 +1,7 @@
 describe("Login and register users on alura pic", ()=> {
 
     beforeEach(() =>{
-        cy.visit("https://alura-fotos.herokuapp.com")
+        cy.visit("/")
 
     })
     it("verifies validation messages", () =>{
