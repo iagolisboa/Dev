@@ -1,14 +1,19 @@
-describe("tests the login screen functions", ()=> {
+describe("Login and register users on alura pic", ()=> {
 
     beforeEach(() =>{
-        
-        it("verifies email validation", () =>{
-            cy.visit("https://alura-fotos.herokuapp.com")
-            cy.contains('a', 'Register now').click();
-            cy.contains('button', 'Register').click();
-            cy.get('input[formcontrolname="email"]').type('iago');
-            
-            cy.contains('ap-vmessage', 'Invalid e-mail').should('be.visible')
-        })
+        cy.visit("https://alura-fotos.herokuapp.com")
+
     })
- })
+    it("verifies validation messages", () =>{
+        cy.contains('a', 'Register now').click();
+        cy.contains('button', 'Register').click();
+        cy.contains('ap-vmessage', 'Email is required').should('be.visible');
+        cy.contains('button', 'Register').click();
+        cy.contains('ap-vmessage', 'Full name is required').should('be.visible');
+       
+        cy.contains('ap-vmessage', 'User name is required').should('be.visible');
+        
+        cy.contains('ap-vmessage', 'Password is required').should('be.visible');
+    })
+    
+})

@@ -2,6 +2,7 @@ describe("register users on alura pic", ()=> {
 
     beforeEach(() =>{
         cy.visit("https://alura-fotos.herokuapp.com")
+    })
         it("verifies validation messages", () =>{
             cy.contains('a', 'Register now').click();
             cy.contains('button', 'Register').click();
@@ -33,5 +34,5 @@ describe("register users on alura pic", ()=> {
             cy.contains('button', 'Register').click();
             //cy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible')
     })
-    })})
+    })
 })

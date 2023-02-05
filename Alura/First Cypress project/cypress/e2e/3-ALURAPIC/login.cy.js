@@ -2,6 +2,7 @@ describe("Login users on alura pic", ()=> {
 
     beforeEach(() =>{
         cy.visit("https://alura-fotos.herokuapp.com")
+    })
         it("Login with valid user", () =>{
             cy.login('flavio','123')
             cy.contains('a','(Logout').should('be.visible')
@@ -12,5 +13,5 @@ describe("Login users on alura pic", ()=> {
                 expect(str).to.equal('Invalid user name or password')
             })
         })
-    })
+    
 })
